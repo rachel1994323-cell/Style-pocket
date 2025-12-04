@@ -1,0 +1,15 @@
+/* 這是 Tailwind CSS 的三個核心指令 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 確保整個網頁的高度設定正確，讓 App 可以佔滿螢幕 */
+html, body, #root {
+  height: 100%;
+}
+
+/* 設定全域字體 */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
