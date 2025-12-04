@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Camera, ShoppingBag, PieChart, Plus, X, Search, Filter, CheckCircle, Shirt, ArrowRight, Sparkles, Tag, LayoutDashboard, Grid3X3 } from 'lucide-react';
 
+import React, { useState, useEffect, useMemo } from 'react';
+import { Camera, ShoppingBag, PieChart, Plus, X, Search, Filter, CheckCircle, Shirt, ArrowRight, Sparkles, Tag, LayoutDashboard, Grid3X3 } from 'lucide-react';
+
 // --- 模擬數據與類型定義 ---
 
 // 樣式標籤 (Style Tags)
@@ -8,18 +11,13 @@ const ALL_STYLES = ['韓系', '復古', '極簡', '歐美', '日系', 'Y2K', '�
 // 產品分類 (Item Categories)
 const ALL_CATEGORIES = ['上衣', '下裝', '外套', '鞋子', '配件'];
 
-// 注意：由於這是純 JS (JSX) 檔案，我們移除了所有 'type' 關鍵字的 TypeScript 類型宣告。
-
-// 預設模擬數據
-const MOCK_OUTFITS = [
-// ... (這裡開始是原本的 MOCK_OUTFITS 數據，請保留原內容)
-
-
+/*
+// 這些是 TypeScript 語法，在純 JSX 環境中會導致編譯失敗，故將其註釋掉
 interface Outfit {
   id: string;
   imageUrl: string;
-  styleTags: StyleTag[];
-  itemsDetected: string[]; // AI 偵測到的單品名稱
+  styleTags: string[];
+  itemsDetected: string[];
   date: string;
 }
 
@@ -27,11 +25,16 @@ interface ShoppingItem {
   id: string;
   name: string;
   price: number;
-  category: ItemCategory;
-  styleTags: StyleTag[]; // 繼承自靈感圖
+  category: string;
+  styleTags: string[];
   status: 'tobuy' | 'bought';
   link?: string;
 }
+*/
+
+// 預設模擬數據
+const MOCK_OUTFITS = [
+// ... (這裡開始是原本的 MOCK_OUTFITS 數據，請保留原內容)
 
 // 預設模擬數據
 const MOCK_OUTFITS: Outfit[] = [
