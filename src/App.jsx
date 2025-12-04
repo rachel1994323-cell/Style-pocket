@@ -1,33 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx'; // 引入您的 StylePocket 核心組件
-import './index.css'; // <<< 請新增這一行，導入 Tailwind CSS
-
-// 此檔案是 React 專案的標準入口點。
-// 它的職責是將 App 組件渲染到 index.html 中的 <div id="root"> 元素中。
-
-const rootElement = document.getElementById('root');
-
-if (rootElement) {
-  // 使用 ReactDOM.createRoot 來啟動 React 18 應用程式
-  ReactDOM.createRoot(rootElement).render(
-    // React.StrictMode 用於開發時的額外檢查
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  );
-} else {
-  // 如果找不到 root 元素，在控制台報錯
-  console.error("無法在 index.html 中找到 <div id='root'> 元素，React 應用程式無法啟動。");
-}
-
 import React, { useState, useEffect, useMemo } from 'react';
-import { Camera, ShoppingBag, PieChart, Plus, X, Search, Filter, CheckCircle, Circle, Tag, Shirt, ArrowRight, Sparkles } from 'lucide-react';
+import { Camera, ShoppingBag, PieChart, Plus, X, Search, Filter, CheckCircle, Shirt, ArrowRight, Sparkles, Tag, LayoutDashboard, Grid3X3 } from 'lucide-react';
 
 // --- 模擬數據與類型定義 ---
 
-type StyleTag = '韓系' | '復古' | '極簡' | '歐美' | '日系' | 'Y2K' | '商務';
-type ItemCategory = '上衣' | '下裝' | '外套' | '鞋子' | '配件';
+// 樣式標籤 (Style Tags)
+const ALL_STYLES = ['韓系', '復古', '極簡', '歐美', '日系', 'Y2K', '商務'];
+// 產品分類 (Item Categories)
+const ALL_CATEGORIES = ['上衣', '下裝', '外套', '鞋子', '配件'];
+
+// 注意：由於這是純 JS (JSX) 檔案，我們移除了所有 'type' 關鍵字的 TypeScript 類型宣告。
+
+// 預設模擬數據
+const MOCK_OUTFITS = [
+// ... (這裡開始是原本的 MOCK_OUTFITS 數據，請保留原內容)
+
 
 interface Outfit {
   id: string;
